@@ -1,4 +1,4 @@
-# Marriages in Toronto efore and after 
+# Marriages in Toronto
 
 ## Overview
 
