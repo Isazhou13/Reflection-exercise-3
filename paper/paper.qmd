@@ -1,0 +1,64 @@
+---
+title: "Marriage in Toronto"
+author: 
+  - Xuanle Zhou
+thanks: "Code and data are available at: TorontoOpenData"
+date: today
+date-format: long
+abstract: "None"
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(palmerpenguins)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+
+The remainder of this paper is structured as follows. @sec-data....
+
+
+
+# Data {#sec-data}
+
+Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+
+```{r}
+#| label: fig-bills
+#| fig-cap: Marriage Licences Issued Over Time
+#| echo: false
+data |>
+  ggplot(aes(x=date, y=marriage_licenses))+
+  geom_point (color = "blue", size = 2)+
+  labs(
+    title = "Marriage Licences Issued Over Time",
+    x = "Date", 
+    y = "Number of Marriage Licences")+
+  theme_minimal()
+```
+
+Talk more about it.
+
+And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
+
+\newpage
+
+
+# References
+
+
